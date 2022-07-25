@@ -1,132 +1,132 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="SpringCloud实用篇020.学习目标1.Nacos配置管理Nacos除了可以做注册中心，同样可以做配置管理来使用。 1.1.统一配置管理当微服务部署的实例越来越多，达到数十、数百时，逐个修改微服务配置就会让人抓狂，而且很容易出错。我们需要一种统一配置管理方案，可以集中管理所有实例的配置。  Nacos一方面可以将配置集中管理，另一方可以在配置变更时，及时通知微服务，实现配置的热更新。 1.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2022/07/24/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8702/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="SpringCloud实用篇020.学习目标1.Nacos配置管理Nacos除了可以做注册中心，同样可以做配置管理来使用。 1.1.统一配置管理当微服务部署的实例越来越多，达到数十、数百时，逐个修改微服务配置就会让人抓狂，而且很容易出错。我们需要一种统一配置管理方案，可以集中管理所有实例的配置。  Nacos一方面可以将配置集中管理，另一方可以在配置变更时，及时通知微服务，实现配置的热更新。 1.">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/assets/image-20210714164426792.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714164742924.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714164856664.png">
-<meta property="og:image" content="http://example.com/assets/L0iFYNF.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714170845901.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714170337448.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714170449612.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714171036335.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714171316124.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714173233650.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714173324231.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714173721309.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714173538538.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714173519963.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714174313344.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714174424818.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714174623557.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714174728042.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714174814204.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714174918088.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714175102524.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714175415087.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714185925910.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714190041542.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714190542730.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714190528450.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714190640857.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714214041796.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714204557771.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714204656214.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714205221970.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714205623048.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714210131152.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714210919458.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714211908341.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714211742956.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714212312871.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714214228409.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714215713563.png">
-<meta property="og:image" content="http://example.com/assets/image-20210714215832675.png">
-<meta property="article:published_time" content="2022-07-24T15:56:30.747Z">
-<meta property="article:modified_time" content="2022-07-24T15:56:30.812Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/assets/image-20210714164426792.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="John Doe">
+
+
+
+
+
+
+
+<title>Hexo</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
+    <link rel="stylesheet" href="/css/style.css">
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
-  
-<meta name="generator" content="Hexo 6.2.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/frame.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 6.2.0"></head>
+  <body>
+    <div class="mask-border">
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            Pineapple&#39;s Blog
+          
+        </a>
       </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">Home</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">Archive</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">Gallery</a>
+              </li> 
+                   
+          
+        </ul>
+      </nav>
     </div>
   </div>
-</header>
+</div>
 
-      <div class="outer">
-        <section id="main"><article id="post-SpringCloud实用篇02" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/24/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8702/" class="article-date">
-  <time class="dt-published" datetime="2022-07-24T15:56:30.747Z" itemprop="datePublished">2022-07-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="SpringCloud实用篇02"><a href="#SpringCloud实用篇02" class="headerlink" title="SpringCloud实用篇02"></a>SpringCloud实用篇02</h1><h1 id="0-学习目标"><a href="#0-学习目标" class="headerlink" title="0.学习目标"></a>0.学习目标</h1><h1 id="1-Nacos配置管理"><a href="#1-Nacos配置管理" class="headerlink" title="1.Nacos配置管理"></a>1.Nacos配置管理</h1><p>Nacos除了可以做注册中心，同样可以做配置管理来使用。</p>
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+        </div>
+        <div class="post-title">
+            
+            
+                *Untitled
+            
+            
+        </div>
+        <span class="post-date">
+            Jul 24, 2022
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <h1 id="SpringCloud实用篇02"><a href="#SpringCloud实用篇02" class="headerlink" title="SpringCloud实用篇02"></a>SpringCloud实用篇02</h1><h1 id="0-学习目标"><a href="#0-学习目标" class="headerlink" title="0.学习目标"></a>0.学习目标</h1><h1 id="1-Nacos配置管理"><a href="#1-Nacos配置管理" class="headerlink" title="1.Nacos配置管理"></a>1.Nacos配置管理</h1><p>Nacos除了可以做注册中心，同样可以做配置管理来使用。</p>
 <h2 id="1-1-统一配置管理"><a href="#1-1-统一配置管理" class="headerlink" title="1.1.统一配置管理"></a>1.1.统一配置管理</h2><p>当微服务部署的实例越来越多，达到数十、数百时，逐个修改微服务配置就会让人抓狂，而且很容易出错。我们需要一种统一配置管理方案，可以集中管理所有实例的配置。</p>
 <p><img src="/assets/image-20210714164426792.png" alt="image-20210714164426792"></p>
 <p>Nacos一方面可以将配置集中管理，另一方可以在配置变更时，及时通知微服务，实现配置的热更新。</p>
@@ -668,117 +668,57 @@
 
 
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/24/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8702/" data-id="cl5zi9x7i000199qz4n796zg0" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2022/07/24/SpringCloud01/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
-</nav>
+</div> 
 
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2022/07/24/SpringCloud01/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+     
+
+     
+    
+    
+
+</div>
+     
   
 </article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/07/24/SpringCloud%E5%AE%9E%E7%94%A8%E7%AF%8702/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/24/SpringCloud01/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/23/JavaBasicUse/">JavaBasicUse</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
+        </div>
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
       
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <div class="footer">
+    <div class="flex-container">
+        <div class="footer-text">
+            
+            
+            
+                Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/zoeingwingkei/frame/">Frame</a>
+                
+        </div>
     </div>
-  </div>
-</footer>
+</div>
 
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
-</body>
+  </body>
 </html>
